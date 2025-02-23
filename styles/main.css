@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    /*Primary*/
+    --primary: hsl(257, 40%, 49%);
+    --accent: hsl(300, 69%, 71%);
+    /*Secondary*/
+    --secondary: hsl(0 0% 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Poppins, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+body {
+    font-family: Open Sans, Arial, sans-serif;
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.link, .link:visited {
+    color: var(--secondary);
+}
+
+.link:hover {
+    color: var(--accent);
+}
+
+.router {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5%;
+}
+
+.link-buttom, .link-buttom:visited {
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-decoration: none;
+    text-align: center;
+    text-anchor: end;
+}
+
+.link-buttom:hover {
+    background-color: var(--accent);
+    color: var(--secondary);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: var(--accent);
+}
+
+@media only screen and (max-device-width: 375px) {
+    body {
+        background-image: url("../images/bg-mobile.svg");
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+        background-position-y: top;
+    }
+
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #logo {
+        align-self: flex-start;
+        width: 30%;
+        margin: 10%;
+    }
+
+    #ilustration {
+        align-self: center;
+        width: 85%;
+        margin: 5%;
+    }
+
+    .hero-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-wrap-style: balance;
+        line-height: 1.7;
+    }
+
+    .link-buttom {
+        width: 50%;
+        padding: .5em;
+        border-radius: 2em;
+        box-shadow: 0px .2em var(--accent / 60%), 0px .2em rgba(30, 30, 30, .6);
+    }
+
+    .router {
+        margin: 12%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-device-width:376px) and (max-device-width: 1440px) {
+    body {
+        background-image: url("../images/bg-desktop.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .presentation {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 60%;
+    }
+    
+    #logo {
+        align-self: flex-start;
+        width: 20%;
+        margin: 10%;
+    }
+
+    #ilustration {
+        align-self: center;
+        width: 80%;
+        margin: 0 5% 5% 5%;
+    }
+
+    .hero-box {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 40%;
+        align-self: center;
+    }
+
+    .hero-box h1 {
+        text-align: left;
+        text-wrap-style: balance;
+        line-height: 1.4em;
+        
+    }
+
+    .hero-box p {
+        text-align: left;
+        text-wrap-style: balance;
+        line-height: 1.4em;
+    }
+
+    .link-buttom {
+        width: 50%;
+        padding: .5em;
+        border-radius: 2em;
+        box-shadow: 0px .2em var(--accent / 60%), 0px .2em rgb(30, 30, 30);
+    }
+
+    .router {
+        align-self: flex-end;
+        gap: 10%;
+        margin-right: 5%;
+    }
+}
